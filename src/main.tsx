@@ -1,9 +1,9 @@
-import { createRoot } from "react-dom/client";
-import { StrictMode } from "react";
-import { MemeGenerator } from "./App.tsx";
+import { createRoot } from 'react-dom/client';
+import { StrictMode } from 'react';
+import { MemeGenerator } from './App.tsx';
 
-createRoot(document.getElementById("root")!).render(
+createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <MemeGenerator />
-  </StrictMode>
+  </StrictMode>,
 );

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -15,11 +15,9 @@ export default {
 
         // misc
         'bg-input': 'var(--bg-input)',
-        'border-primary': 'var(--border-primary)'
-
-      }
+        'border-primary': 'var(--border-primary)',
+      },
     },
   },
   plugins: [],
-}
-
+};
