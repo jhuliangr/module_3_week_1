@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --main-primary: #ce0014;
+  --main-secondary: #ffffff;
+  --main-third: #e3e3e3;
+
+  --bg-input: #f7f7f7;
+  --border-primary: #4b5563;
+
+  --text-primary: #130403;
+  --text-secondary: #f2f1fd;
+  --text-third: #8c1515;
+}
+html{
+  background-color: rgba(0,0,0,0.1);
+}
