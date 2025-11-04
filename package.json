@@ -1,7 +1,7 @@
 {
   "name": "meme_generator",
-  "private": true,
-  "version": "1.0.0",
+  "homepage": "https://jhuliangr.github.io/module_3_week_1",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
@@ -10,14 +10,17 @@
     "lint-typecheck": "tsc --noEmit",
     "lint-eslint": "eslint .",
     "lint-prettier": "prettier --check .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest"
   },
   "dependencies": {
-    "react": "^19.3.1",
-    "react-dom": "^19.3.1"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.3",
@@ -26,10 +29,12 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
+    "jsdom": "^27.1.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.14",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.11.0",
-    "vite": "^5.4.10"
+    "vite": "^5.4.10",
+    "vitest": "^4.0.6"
   }
 }

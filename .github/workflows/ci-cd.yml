@@ -1,0 +1,55 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: pnpm ci
+
+      - name: Run tests
+        run: pnpm test
+
+      - name: Build project
+        run: pnpm build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    name: Publish
+    runs-on: ubuntu-latest
+    environment: github-pages
+    needs: build-and-test
+    if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main'
+
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+
+    permissions:
+      id-token: write
+      pages: write
+      contents: write
+      packages: write
+
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4

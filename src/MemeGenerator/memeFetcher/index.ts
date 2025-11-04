@@ -1,0 +1,1 @@
+export { useGetMemes } from './useGetMemes';
